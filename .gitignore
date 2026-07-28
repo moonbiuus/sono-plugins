@@ -1,0 +1,4 @@
+# mirror/ 是 build_index.py 的构建输出，推成 mirror 分支的素材，不进 main
+mirror/
+__pycache__/
+.DS_Store

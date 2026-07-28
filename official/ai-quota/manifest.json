@@ -1,0 +1,20 @@
+{
+  "manifestVersion": 1,
+  "id": "ai-quota",
+  "name": "AI 额度",
+  "version": "1.0.0",
+  "description": "Claude Code 与 Codex 的订阅额度，切到这一站就是最新的。",
+  "author": { "name": "Sono", "github": "moonbiuus" },
+  "official": true,
+  "contentType": "board",
+  "minSonoVersion": "0.6.0",
+  "license": "MIT",
+  "category": "monitor",
+  "files": { "board": "spec.json", "scripts": ["ai-quota.py"], "preview": "preview.json" },
+  "disclosures": {
+    "network": ["api.anthropic.com"],
+    "reads": ["~/.codex/sessions/", "~/.claude/.credentials.json", "钥匙串项 Claude Code-credentials"],
+    "writes": [],
+    "spawns": ["/usr/bin/security"]
+  }
+}

@@ -1,0 +1,59 @@
+name: validate
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  check:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: 校验条目与内容（dry run，不写文件）
+        run: python3 scripts/build_index.py --check
+
+  build:
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: 重建 index.json 与 mirror/
+        run: python3 scripts/build_index.py
+      - name: 提交 index.json 变化
+        run: |
+          if git diff --quiet -- index.json; then
+            echo "index.json 无变化"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898270+github-actions[bot]@users.noreply.github.com"
+          git add index.json
+          git commit -m "ci: rebuild index.json"
+          git push
+      - name: 更新 mirror 分支
+        run: |
+          set -e
+          [ -d mirror ] || { echo "无 mirror 输出"; exit 0; }
+          tmp=$(mktemp -d)
+          cp -R mirror/. "$tmp/"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898270+github-actions[bot]@users.noreply.github.com"
+          if git ls-remote --exit-code origin mirror >/dev/null 2>&1; then
+            git fetch origin mirror
+            git checkout mirror
+          else
+            git checkout --orphan mirror
+            git rm -rf --quiet . || true
+          fi
+          cp -R "$tmp/." .
+          git add -A
+          if git diff --cached --quiet; then
+            echo "mirror 无变化"
+            exit 0
+          fi
+          git commit -m "ci: mirror reviewed content"
+          git push origin mirror

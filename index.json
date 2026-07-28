@@ -1,0 +1,83 @@
+{
+  "generatedAt": "2026-07-28T20:40:07Z",
+  "plugins": [
+    {
+      "author": {
+        "github": "moonbiuus",
+        "name": "Sono"
+      },
+      "board": "spec.json",
+      "category": "monitor",
+      "description": "Claude Code 与 Codex 的订阅额度，切到这一站就是最新的。",
+      "disclosures": {
+        "network": [
+          "api.anthropic.com"
+        ],
+        "reads": [
+          "~/.codex/sessions/",
+          "~/.claude/.credentials.json",
+          "钥匙串项 Claude Code-credentials"
+        ],
+        "spawns": [
+          "/usr/bin/security"
+        ],
+        "writes": []
+      },
+      "files": {
+        "README.md": "sha256:ffcfbff28e550c25a5b6a25c213993c2b2405580cb516f549f1cd478439b0337",
+        "ai-quota.py": "sha256:06a3af2efa8a0d76b63a1a340f7e345923ba9f4b56445b4892e661ffbf14c1a8",
+        "manifest.json": "sha256:2c25dbaf21bb2d4d60f2e5c11dc71e7980fb5f0865d6192432fce4192975472e",
+        "preview.json": "sha256:83cac32cb8012d4300bd7b3001091fae6e99ab1376cc90918885ba67608a794b",
+        "spec.json": "sha256:dc895fd8c3ad22976cb19a951f18454237aff45ac2f58f1eb72758817dd913eb"
+      },
+      "icon": "gauge",
+      "id": "ai-quota",
+      "name": "AI 额度",
+      "official": true,
+      "path": "official/ai-quota",
+      "preview": "preview.json",
+      "repo": "https://github.com/moonbiuus/sono-plugins",
+      "reviewedAt": "2026-07-28T00:00:00Z",
+      "scripts": [
+        "ai-quota.py"
+      ],
+      "tag": "plugin-ai-quota-1.0.0",
+      "version": "1.0.0"
+    },
+    {
+      "author": {
+        "github": "moonbiuus",
+        "name": "Sono"
+      },
+      "board": "spec.json",
+      "category": "monitor",
+      "description": "系统卷与数据卷还剩多少空间，切到这一站就是最新的。",
+      "disclosures": {
+        "network": [],
+        "reads": [],
+        "spawns": [],
+        "writes": []
+      },
+      "files": {
+        "README.md": "sha256:9180e6a7d172ce6eafeddc93ec14e91d89c8d5fecd9b7257a7808d10a6c13bef",
+        "disk-space.py": "sha256:f8febebe1777af2b208b6d124a65cc1b67e592225484353ab713c549f57bb6d8",
+        "manifest.json": "sha256:1de4d6efa13b448973b6fbacb201c887d6109bb745db844db02ba6628f65f6a0",
+        "preview.json": "sha256:4964977119359f165e9ce741b48dcf36d6bcbd93fc769931fd2638aeb3acfa98",
+        "spec.json": "sha256:7a4dd52e935ad2cc6a0e694ae7cc453f9fd628bc6da11ba65b117df7989ace93"
+      },
+      "icon": "internaldrive",
+      "id": "disk-space",
+      "name": "磁盘余量",
+      "official": false,
+      "preview": "preview.json",
+      "repo": "https://github.com/moonbiuus/sono-plugin-disk-space",
+      "reviewedAt": "2026-07-28T00:00:00Z",
+      "scripts": [
+        "disk-space.py"
+      ],
+      "tag": "1.0.0",
+      "version": "1.0.0"
+    }
+  ],
+  "version": 1
+}

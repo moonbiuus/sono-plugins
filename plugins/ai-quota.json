@@ -1,0 +1,9 @@
+{
+  "id": "ai-quota",
+  "repo": "https://github.com/moonbiuus/sono-plugins",
+  "path": "official/ai-quota",
+  "tag": "plugin-ai-quota-1.0.0",
+  "official": true,
+  "reviewedAt": "2026-07-28T00:00:00Z",
+  "reviewTier": "slow"
+}

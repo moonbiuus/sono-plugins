@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "board": "ai-quota",
+  "displayName": "AI 额度",
+  "icon": "gauge",
+  "exec": {
+    "file": "~/.sono/boards/bin/ai-quota/ai-quota.py",
+    "refresh": { "argv": ["${exec.file}", "refresh"] },
+    "actions": []
+  }
+}
