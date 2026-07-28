@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "board": "disk-space",
+  "displayName": "磁盘余量",
+  "icon": "internaldrive",
+  "exec": {
+    "file": "~/.sono/boards/bin/disk-space/disk-space.py",
+    "refresh": { "argv": ["${exec.file}", "refresh"] },
+    "actions": []
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "manifestVersion": 1,
+  "id": "disk-space",
+  "name": "磁盘余量",
+  "version": "1.0.0",
+  "description": "系统卷与数据卷还剩多少空间，切到这一站就是最新的。",
+  "author": { "name": "Sono", "github": "moonbiuus" },
+  "contentType": "board",
+  "minSonoVersion": "0.6.0",
+  "license": "MIT",
+  "category": "monitor",
+  "files": { "board": "spec.json", "scripts": ["disk-space.py"], "preview": "preview.json" },
+  "disclosures": {
+    "network": [],
+    "reads": [],
+    "writes": [],
+    "spawns": []
+  }
+}

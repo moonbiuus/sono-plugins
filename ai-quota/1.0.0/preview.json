@@ -1,0 +1,12 @@
+{
+  "headline": "最紧的是 Claude 5 小时窗口：已用 62%",
+  "rows": [
+    { "kind": "row", "id": "claude-5h", "title": "Claude · 5 小时",
+      "detail": "已用 62% · 今天 16:00 重置", "badge": "剩 38%" },
+    { "kind": "row", "id": "claude-weekly", "title": "Claude · 一周",
+      "detail": "已用 41% · 8/1 09:00 重置", "badge": "剩 59%" },
+    { "kind": "row", "id": "codex-weekly", "title": "Codex · 一周",
+      "detail": "已用 11% · 8/4 05:22 重置 · 12 分钟前的快照", "badge": "剩 89%" },
+    { "kind": "note", "text": "Codex 数据来自本地会话文件，新鲜度等于 Codex 上次运行的时刻" }
+  ]
+}

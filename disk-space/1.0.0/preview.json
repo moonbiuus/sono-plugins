@@ -1,0 +1,9 @@
+{
+  "headline": "数据卷剩 182 GB（37%）",
+  "rows": [
+    { "kind": "row", "id": "root", "title": "系统卷",
+      "detail": "已用 2% · 共 494 GB", "badge": "剩 484 GB" },
+    { "kind": "row", "id": "data", "title": "数据卷",
+      "detail": "已用 63% · 共 494 GB", "badge": "剩 182 GB" }
+  ]
+}
